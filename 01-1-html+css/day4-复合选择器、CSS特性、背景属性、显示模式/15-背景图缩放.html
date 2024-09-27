@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-背景图缩放</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+
+            background-image: url(./day1-基本操作/总结.jpg);
+            background-repeat: no-repeat;
+
+            /* contain：如果图的宽高和盒子尺寸相等停止缩放 可能会导致盒子留白 */
+            /* background-size: contain; */
+            /* cover：图片完全覆盖盒子，可能导致盒子图片显示不全 */
+            /* 100% 图片的宽度和盒子一样，图片的高度按照图片等比例缩放 */
+            background-size: 99%;
+
+        }
+    </style>
+</head>
+<body>
+    <div>div标签</div>
+</body>
+</html>
