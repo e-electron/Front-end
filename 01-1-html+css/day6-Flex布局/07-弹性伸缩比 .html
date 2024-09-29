@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-弹性伸缩比 </title>
+    <style>
+        /* 默认情况下 主轴靠内容撑开 侧轴由父级元素撑开盒子 */
+        .box {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box div {
+            /* height: 100px; */
+            background-color: pink;
+        }
+        .box div:nth-child(1) {
+            width: 200px;
+        }
+        .box div:nth-child(2) {
+            flex: 1;
+        }
+        .box div:nth-child(3) {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

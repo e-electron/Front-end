@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-Flex布局</title>
+    <style>
+        /* 弹性容器 */
+        .box {
+            display: flex;
+            /* justify-content: space-between;  */
+            /* 弹性盒子侧轴方向没有高度才能拉伸 */
+            align-items: stretch;
+
+            height: 300px;
+            border: 1px solid #000;
+        }
+        /* 弹性盒子 ：沿着主轴方向排列 */
+        .box div {
+            /* float: left;
+            margin: 50px; */
+
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* 第二个盒子 */
+        .box div:nth-child(2) {
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
