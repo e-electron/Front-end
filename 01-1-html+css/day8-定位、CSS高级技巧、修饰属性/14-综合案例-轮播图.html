@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-综合案例-轮播图</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li {
+            list-style: none;
+        }
+        .banner {
+            position: relative;
+            /* 只显示一张图 */
+            overflow: hidden;
+            width: 564px;
+            height: 315px;
+            /* background-color: pink; */
+            margin: 100px auto;
+        }
+        /* tupian */
+        img {
+            /* 图片的空白间距去除 */
+            vertical-align: middle;
+            width: 564px;
+            border-radius: 12px;
+
+        }
+        .banner ul {
+            display: flex;
+        }
+        /* 箭头 */
+        .banner .prev,
+        .banner .next {
+            /* 隐藏 */
+            display: none;
+            position: absolute;
+            top: 50%;
+            /* 箭头放到垂直中间去 */
+            transform: translateY(-50%);
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+
+            text-decoration: none;
+            color: #fff;
+            line-height: 30px;
+        }
+        /* 鼠标滑倒banner区域 箭头要显示display：block */
+        .banner:hover .prev,
+        .banner:hover .next {
+            /* 隐藏 */
+            display: block;
+        }
+        .banner .prev {
+            left: 0;
+            border-radius: 0 15px 15px 0;
+        }
+        .banner .next {
+            right: 0;
+            border-radius: 15px 0 0 15px;
+            text-align: center;
+        }
+        /* 圆点 */
+        .banner ol {
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            height: 13px;
+            background-color: rgba(255,255,255,0.3);
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        .banner ol li {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px;
+            cursor: pointer;
+        }
+        /* 橙色的li */
+        .banner ol .active {
+            background-color: #f50;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <!-- 图片 -->
+        <ul>
+            <li>
+                <a href="#"><img src="./images/banner1.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/banner2.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/banner3.jpg" alt=""></a>
+            </li>
+        </ul>
+        <!-- 箭头 -->
+        <!-- 上一张 -->
+        <a href="#" class="prev">
+            <i class="iconfont icon-icon-test4"></i>
+        </a>
+        <!-- 下一张 -->
+        <a href="#" class="next">
+            <i class="iconfont icon-icon-test4"></i>
+        </a>
+        <!-- 圆点 -->
+        <ol>
+            <li></li>
+            <li class="active"></li>
+            <li></li>
+        </ol>
+    </div>
+</body>
+</html>
