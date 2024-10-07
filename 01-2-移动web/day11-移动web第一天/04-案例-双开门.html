@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-案例-双开门</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1.布局：父子级结构，父级是大图，子级是左右小图 */
+        .father {
+            display: flex;
+            overflow: hidden;
+            margin: 100px auto;
+            width: 1366px;
+            height: 600px;
+            background-image: url(./images/bg.jpg);
+        }
+        .father .left,
+        .father .right {
+            width: 683px;
+            height: 600px;
+            background-image: url(./images/fm.jpg);
+
+            transition: all 1s;
+        }
+        .father .right {
+            /* right表示取到精灵图的右侧 */
+            background-position: right 0;
+        }
+        .father:hover .left {
+            transform: translateX(-100%);
+        }
+        .father:hover .right {
+            transform: translateX(100%);
+        }
+        /* 2.鼠标悬停效果：左右移动 */
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

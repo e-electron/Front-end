@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-平面转换-倾斜</title>
+    <style>
+        div {
+            margin: 100px auto;
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        div:hover {
+            /* 正：向左开始倾斜 */
+            transform: skew(20deg);
+            /* 负：向右开始倾斜 */
+            transform: skew(-30deg);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

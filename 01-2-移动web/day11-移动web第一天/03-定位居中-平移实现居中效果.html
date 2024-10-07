@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-定位居中-平移实现居中效果</title>
+    <style>
+        .father {
+            position: relative;
+
+            width: 800px;
+            height: 400px;
+            background-color: #000;
+        }
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            /* 向左向上移动自身尺寸的50% */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
