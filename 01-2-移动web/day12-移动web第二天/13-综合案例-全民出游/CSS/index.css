@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 大背景 */
+/* 默认状态HTML和body的高度时0，所以导致cover缩放背景图不成功 */
+html {
+    height: 100%;
+}
+body {
+    position: relative;
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center 0 / cover;
+}
+
+/* 云 */
+.cloud img {
+    position: absolute;
+    left: 50%;
+}
+.cloud img:nth-child(1) {
+    margin-left: -250px;
+    top: 20px;
+
+    animation: cloud 1s .5s infinite alternate linear;
+}
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+
+    animation: cloud 1s .2s infinite alternate linear;
+}
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+
+    animation: cloud 1s infinite alternate linear;
+}
+@keyframes cloud {
+    100% {
+        transform: translate(20px);
+    }
+}
+
+/* 气泡 */
+.bubble img {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+}
+.bubble img:nth-child(1) {
+    margin-left: -400px;
+    top: 150px;
+    animation: bubble 1s infinite alternate linear;
+}
+.bubble img:nth-child(2) {
+    margin-left: -400px;
+    animation: bubble .5s infinite alternate linear;
+}
+.bubble img:nth-child(3) {
+    margin-left: -200px;
+    animation: bubble .5s infinite alternate linear;
+}
+.bubble img:nth-child(4) {
+    margin-left: 0px;
+    animation: bubble .5s infinite alternate linear;
+}
+.bubble img:nth-child(5) {
+    margin-left: 200px;
+    animation: bubble .5s infinite alternate linear;
+}
+@keyframes bubble {
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 文字 */
+.text img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: text .5s;
+}
+/* 默认 -> 小 -> 大 -> 小 ->默认 */
+@keyframes text {
+    20% {
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

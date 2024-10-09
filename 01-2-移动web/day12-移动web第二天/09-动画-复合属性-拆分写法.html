@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-动画-复合属性-拆分写法</title>
+    <style>
+         .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            
+
+            /* 动画名称 */
+            animation-name: change;
+            /* 动画时长 */
+            animation-duration: 1s;
+            /* 播放次数 */
+            animation-iteration-count: infinite;
+         }
+
+         .box:hover {
+            /* 暂停动画 */
+            animation-play-state: paused;
+         }
+
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

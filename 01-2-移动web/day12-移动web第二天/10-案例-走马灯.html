@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-案例-走马灯</title>
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+      }
+        .box ul {
+            display: flex;
+            animation: move 10s linear infinite;
+
+        }
+        li {
+            display: block;
+            list-style: none;
+        }
+        img {
+            height: 100%;
+            width: 200px;
+        }
+        .box {
+            overflow: hidden;
+            width: 600px;
+            height: 112px;
+            border: 5px solid #000;
+            margin: 100px auto;
+
+        }
+        .box:hover  ul {
+            animation-play-state: paused;
+        }
+
+        /* 定义一个位移的动画 给ul使用 子级全部li跟着移动 鼠标悬停时暂停动画 */
+        @keyframes move {
+            from {
+                transform: translate(0);
+            }
+            to {
+                transform: translateX(-1400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="./images/1.jpg" alt=""></li>
+            <li><img src="./images/2.jpg" alt=""></li>
+            <li><img src="./images/3.jpg" alt=""></li>
+            <li><img src="./images/4.jpg" alt=""></li>
+            <li><img src="./images/5.jpg" alt=""></li>
+            <li><img src="./images/6.jpg" alt=""></li>
+            <li><img src="./images/7.jpg" alt=""></li>
+
+            <!-- 替身：填补显示区域的露白 -->
+            <li><img src="./images/1.jpg" alt=""></li>
+            <li><img src="./images/2.jpg" alt=""></li>
+            <li><img src="./images/3.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

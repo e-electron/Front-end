@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-案例-逐帧动画</title>
+    <style>
+        div {
+            width: 140px;
+            height: 140px;
+            border: 1px solid #000;
+            background-image: url(./images/bg.png);
+
+            animation: run 1s infinite steps(12);
+        }
+
+        @keyframes run {
+            0% {
+                background-position: 0x 0;
+            }
+            100% {
+                background-position: -1680px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-空间转换-平移</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        .box:hover {
+            /* 默认状况下 无法观察到z轴的平移效果 */
+            /* 括号里必须逗号隔开三个数 差一个则都不生效 */
+            transform: translate3d(0, 0, 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

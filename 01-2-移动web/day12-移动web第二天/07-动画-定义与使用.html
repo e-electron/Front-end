@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-动画-定义与使用</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            animation: change1 2s ;
+            animation: change2 2s ;
+        }
+
+        /* 动画1：宽度从200变化到800 */
+        @keyframes change1 {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 800px;
+            }
+        }
+
+        /* 动画2：从200*100变化到300*300 变化到800*500 */
+        /* 百分比：动画时长的百分比 */
+        @keyframes change2 {
+            0% {
+                width: 200px;
+                height: 100px;
+            }
+            50% {
+                width: 300px;
+                height: 300px;
+            }
+            100% {
+                width: 800px;
+                height: 500px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+     <div class="box"></div>
+</body>
+</html>
