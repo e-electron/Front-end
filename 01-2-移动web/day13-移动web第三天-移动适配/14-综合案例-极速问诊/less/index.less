@@ -1,0 +1,88 @@
+// out:../css/
+
+@import './base.less';
+
+// 定义变量
+@rootSize:37.5rem;
+
+// 头部
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 (15 / @rootSize);
+    height: (44 / @rootSize);
+    // background-color: pink;
+    line-height: (44 / @rootSize);
+
+    .icon-left {
+        font-size: (22 / @rootSize);
+    }
+    h3 {
+        font-size: (17 / @rootSize);
+    }
+    .note {
+        font-size: (15 / @rootSize);
+        color: #2CB5A5;
+    }
+}
+
+// banner区域
+.banner {
+    margin-top: (30 / @rootSize);
+    margin-bottom: (34 / @rootSize);
+    // 水平居中
+    text-align: center;
+
+    img {
+        width: (240 / @rootSize);
+        height: (206 / @rootSize);
+        margin-bottom: (18 / @rootSize);
+    }
+    p {
+        font-size: (16 / @rootSize);
+        span {
+            color: #2CB5A5;
+        }
+    }
+}
+
+// type区域
+.type {
+    padding: 0 (15 / @rootSize);
+
+    li {
+        margin-bottom: (15 / @rootSize);
+        padding: 0 (15 / @rootSize);
+        height: (78 / @rootSize);
+        border: (0.5 / @rootSize) solid #EDEDED;
+        border-radius: (4 / @rootSize);
+        a {
+            display: flex;
+            align-items: center;
+            // 内容在a里面垂直居中 需要78和父级一样高
+            height: 100%;
+            img {
+                margin-right: (14 / @rootSize);
+                width: (40 / @rootSize);
+                height: (40 / @rootSize);
+            }
+            .txt {
+                flex: 1;
+                h4 {
+                    font-size: (16 / @rootSize);
+                    color: #3C3E42;
+                    line-height: (24 / @rootSize);
+                }
+                p {
+                    font-size: (13 / @rootSize);
+                    color: #848484;
+                    line-height: (20 / @rootSize);
+                }
+            }
+            span {
+                font-size: (16 / @rootSize);
+                color: #848484;
+            }
+        }
+    }
+}
