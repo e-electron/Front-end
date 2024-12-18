@@ -1,0 +1,201 @@
+// out:../css/
+
+
+// 公共样式
+@size:3.75vw;
+ .red {
+    color: #cf4444 !important;
+ }
+ .pannel {
+    margin-top: (10 / @size);
+    background-color: #fff;
+    border-radius: (5 / @size);
+ }
+
+
+body {
+    background-color: #f7f7f8;
+}
+// 主体内容
+.main {
+    // 80px 为了底部不被盖住
+    padding: (12 / @size) (11 / @size) (80 / @size) ;
+    .user_msg {
+        display: flex;
+        padding: (15 / @size) 0 (15 / @size) (11 / @size);
+        align-items: center;
+        .location {
+            width: (30 / @size);
+            height: (30 / @size);
+            margin-right: (10 / @size);
+            background-image: linear-gradient(90deg,
+            #6fc2aa 5%,
+            #54b196 100%);
+            border-radius: 50%;
+            line-height: (30 / @size);
+            color: #fff;
+            text-align: center;
+        }
+        .user {
+            flex: 1;
+            .top {
+                display: flex;
+                align-items: center;
+                h5 {
+                    width: (55 / @size);
+                    font-size: (15 / @size);
+                    font-weight: normal;
+                }
+            }
+            .bottom {
+                margin-top: (5 / @size);
+                font-size: (12 / @size);
+            }
+        }
+        .more {
+            width: (44 / @size);
+            height: (44 / @size);
+            // background-color: pink;
+            text-align: center;
+            line-height: (44 / @size);
+            color: #808080;
+        }
+    }
+
+    .goods {
+        display: flex;
+        padding: (11 / @size) 0 (11 / @size) (11 / @size);
+        .pic {
+            width: (85 / @size);
+            height: (85 / @size);
+            margin-right: (10 / @size);
+        }
+        .info {
+            flex: 1;
+            h5 {
+                font-size: (13 / @size);
+                color: #262626;
+                font-weight: 400;
+            }
+            p {
+                margin: (5 / @size) 0;
+                width: (100 / @size);
+                height: (20 / @size);
+                background-color: #f7f7f8;
+                font-size: (12 / @size);
+                color: #888;
+                span {
+                    margin-right: (5 / @size);
+                }
+            }
+            .price {
+                font-size: (16 / @size);
+                span:last-child {
+                    font-size: (12 / @size);
+                    margin-left: (5 / @size);
+                    color: #999;
+                    text-decoration: line-through;
+                }
+            }
+        }
+        .count {
+            width: (44 / @size);
+            height: (44 / @size);
+            // background-color: pink;
+            text-align: center;
+            line-height: (44 / @size);
+        }
+    }
+
+    // 其他信息
+    .rest {
+        padding: (15 / @size);
+        h5,p {
+            font-size: (13 / @size);
+            color: #262626;
+            font-weight: 400;
+        }
+        div {
+            display: flex;
+            margin-bottom: (30 / @size);
+        }
+        div:nth-child(2n+1) {
+            justify-content: space-between;
+        }
+        div:nth-child(2) {
+            h5 {
+                margin-right: (20 / @size);
+            }
+            p {
+                color: #989898;
+            }
+        }
+        div:last-child {
+            margin-bottom: 0;
+            p {
+                span {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .bill {
+        padding: (15 / @size);
+        div {
+            display: flex;
+            justify-content: space-between;
+            h5, p{
+            margin-bottom: (30 / @size);
+            font-size: (13 / @size);
+            color: #262626;
+            font-weight: 400;
+            }
+        }
+    }
+
+}
+// 主体内容
+
+// 底部支付
+.pay {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: (80 / @size);
+    width: 100%;
+
+    padding: 0 (10 / @size);
+    // background-color: pink;
+    border-top: (1 / @size) solid #ededed;
+    .left {
+        font-size: (12 / @size);
+        span {
+            i {
+                font-size: (20 / @size);
+            }
+        }
+    }
+    .right {
+        a {
+            display: block;
+            height: (35 / @size);
+            width: (90 / @size);
+            background-image: linear-gradient(90deg,
+                #6fc2aa 5%,
+                #54b196 100%
+            );
+            border-radius: (3 / @size);
+            text-align: center;
+            line-height: (35 / @size);
+            color: #fff;
+            font-size: (13 / @size); 
+         }
+    }
+}
+// 底部支付
+
