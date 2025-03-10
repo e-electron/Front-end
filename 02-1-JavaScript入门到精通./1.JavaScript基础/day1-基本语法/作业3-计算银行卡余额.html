@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #000;
+    }
+
+    th {
+      padding: 5px 30px;
+    }
+
+    td {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>2020年12月消费支出</h2>
+
+
+  <script>
+    let sumPrice = Number(prompt('请输入银行卡总额'))
+    let waterPrice = Number(prompt('请输入水费'))
+    let electronPrice = Number(prompt('请输入电费'))
+    let webPrice = Number(prompt('请输入网费'))
+    let yue = sumPrice - waterPrice - electronPrice - webPrice
+    document.write(`
+      <table>
+      <tr>
+        <th>银行卡余额</th>
+        <th>水费</th>
+        <th>电费</th>
+        <th>网费</th>
+        <th>银行卡余额</th>
+      </tr>
+      <tr>
+        <td>${sumPrice}元</td>
+        <td>${waterPrice}元</td>
+        <td>${electronPrice}元</td>
+        <td>${webPrice}元</td>
+        <td>${yue}元</td>
+      </tr>
+    </table>
+    `)
+  </script>
+</body>
+
+</html>
