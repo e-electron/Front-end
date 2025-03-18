@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+Function.prototype.myApply = function(thisArg,args){
+  const key = Symbol('key')
+  thisArg[key]=this
+  const res = thisArg[key](...args)
+  delete thisArg[key]
+  return res
+}
+
+
+const person = {
+name: 'itheima'
+}
+
+function func(numA, numB) {
+console.log(this)
+console.log(numA, numB)
+return numA + numB
+}
+
+const res = func.myApply(person, [2, 8])
+console.log('返回值为:', res)
+  </script>
+</body>
+</html>

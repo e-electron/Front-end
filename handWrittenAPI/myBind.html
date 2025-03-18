@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//  Function.prototype.myBind = function (thisArg,...args){
+//   const key = Symbol('key')
+//   thisArg[key] = this
+//   return (...reargs)=>{
+//     const res = thisArg[key](...args,...reargs)
+//     delete thisArg[key]
+//     return res
+//   }
+//  }
+
+Function.prototype.myBind = function (thisArg,...args){
+  return (...reargs)=>{
+    // 这里的this指向的是掉用myBind的原函数
+    return this.call(thisArg,...args,...reargs)
+  }
+ }
+
+const person = {
+ name: 'itheima'
+}
+
+function func(numA, numB, numC, numD) {
+ console.log(this)
+ console.log(numA, numB, numC, numD)
+ return numA + numB + numC + numD
+}
+
+const bindFunc = func.myBind(person, 1, 2)
+
+const res = bindFunc(3, 4)
+console.log('返回值:', res)
+  </script>
+</body>
+</html>

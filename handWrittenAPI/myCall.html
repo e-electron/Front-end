@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>手写call</h2>
+
+  <script>
+// 定义myCall
+
+Function.prototype.myCall = function(thisArg,...arg){
+  const key = Symbol('key')
+  // thisArg[key]动态解析出key的值作为属性名
+  thisArg[key] = this
+  const res = thisArg[key](...arg)
+  delete thisArg[key]
+  return res
+}
+
+
+    // 测试代码
+    const person = {
+     name: 'itheima'
+    }
+    function func(numA, numB) {
+     console.log('func',this)
+     console.log(numA, numB)
+     return numA + numB
+    }
+    // 参数1:指定的this值
+    // 参数2-参数n:原函数参数
+    const res = func.myCall(person, 2, 8)
+    console.log('返回值为:', res)
+
+
+
+  </script>
+</body>
+</html>
