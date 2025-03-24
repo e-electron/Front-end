@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+
+    let sum = 100
+    while (true) {
+      select = +(prompt(`
+        选择你要进行的操作
+        1.存钱
+        2.取钱
+        3.查看余额
+        4.退出`))
+      if (select === 4) {
+        break
+      }
+      switch (select) {
+        case 1:
+          let num1 = +(prompt('请输入你要存的金额'))
+          sum += num1
+          break
+        case 2:
+          let num2 = +(prompt('请输入你要取出的金额'))
+          sum -= num2
+          break
+        case 3:
+          alert(`你的余额为${sum}`)
+          break
+        default:
+          alert('请输入正确的操作序号')
+      }
+    }
+  </script>
+</body>
+
+</html>

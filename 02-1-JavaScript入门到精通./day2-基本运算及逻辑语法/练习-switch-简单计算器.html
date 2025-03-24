@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=2, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    let num1 = +prompt('请输入你的第一个数字')
+    let char = prompt('请输入你的运算符')
+    let num2 = +prompt('请输入你的第二个数字')
+    switch (char) {
+      case '+':
+        alert(`${num1}${char}${num2}=${num1 + num2}`)
+        break
+      case '-':
+        alert(`${num1}${char}${num2}=${num1 - num2}`)
+        break
+      case '*':
+        alert(`${num1}${char}${num2}=${num1 * num2}`)
+        break
+      case '/':
+        alert(`${num1}${char}${num2}=${num1 / num2}`)
+        break
+      default:
+        alert('你输入的运算符错误')
+    }
+  </script>
+</body>
+
+</html>

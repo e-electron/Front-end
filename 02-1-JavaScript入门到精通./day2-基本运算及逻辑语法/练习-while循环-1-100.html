@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+    let i = 1
+    let sum = 0
+    let odd_sum = 0
+    while (i <= 100) {
+      document.write(`这是第${i}个数<br>`)
+      sum += i
+      if (i % 2 === 0) {
+        odd_sum += i
+      }
+      i++
+    }
+    document.write(`1-100的和：${sum}<br>1-100的偶数和：${odd_sum}`)
+  </script>
+</body>
+
+</html>
